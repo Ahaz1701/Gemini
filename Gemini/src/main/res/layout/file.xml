@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="5dp"
+    android:id="@+id/file" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/thumbnail"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            tools:ignore="MissingConstraints"
+            android:contentDescription="@string/todo" />
+
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/file_size"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:buttonTint="@color/white"
+            app:layout_constraintTop_toTopOf="@id/thumbnail"
+            app:layout_constraintStart_toStartOf="@id/thumbnail"
+            app:layout_constraintEnd_toEndOf="@id/thumbnail"/>
+
+        <TextView
+            android:id="@+id/openFully"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_baseline_open_in_full_24"
+            android:layoutDirection="rtl"
+            app:layout_constraintBottom_toBottomOf="@id/thumbnail"
+            tools:ignore="MissingConstraints"
+            android:paddingHorizontal="5dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
